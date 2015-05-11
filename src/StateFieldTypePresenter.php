@@ -1,16 +1,16 @@
-<?php namespace Anomaly\CountryFieldType;
+<?php namespace Anomaly\StateFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldTypePresenter;
 
 /**
- * Class CountryFieldTypePresenter
+ * Class StateFieldTypePresenter
  *
  * @link          http://anomaly.is/streams-platform
  * @author        AnomalyLabs, Inc. <hello@anomaly.is>
  * @author        Ryan Thompson <ryan@anomaly.is>
- * @package       Anomaly\CountryFieldType
+ * @package       Anomaly\StateFieldType
  */
-class CountryFieldTypePresenter extends FieldTypePresenter
+class StateFieldTypePresenter extends FieldTypePresenter
 {
 
 }
