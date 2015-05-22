@@ -35,7 +35,7 @@ class StateFieldType extends FieldType
             'CA' => 'California',
             'CO' => 'Colorado',
             'CT' => 'Connecticut',
-            'DE' => 'Deleware',
+            'DE' => 'Delaware',
             'DC' => 'District of Columbia',
             'FL' => 'Florida',
             'GA' => 'Georgia',
