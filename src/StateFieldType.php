@@ -27,6 +27,7 @@ class StateFieldType extends FieldType
      * @var array
      */
     protected $config = [
+        'country' => 'US',
         'handler' => 'Anomaly\StateFieldType\StateFieldTypeOptions@handle'
     ];
 
