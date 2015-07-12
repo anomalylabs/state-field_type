@@ -1,5 +1,6 @@
 <?php namespace Anomaly\StateFieldType;
 
+use Anomaly\StateFieldType\Command\BuildOptions;
 use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 
 /**
@@ -21,67 +22,56 @@ class StateFieldType extends FieldType
     protected $inputView = 'anomaly.field_type.state::input';
 
     /**
-     * Get the states.
+     * The field type config.
+     *
+     * @var array
+     */
+    protected $config = [
+        'handler' => 'Anomaly\StateFieldType\StateFieldTypeOptions@handle'
+    ];
+
+    /**
+     * The dropdown options.
+     *
+     * @var null|array
+     */
+    protected $options = null;
+
+    /**
+     * Get the dropdown options.
      *
      * @return array
      */
     public function getOptions()
     {
-        $states = [
-            'AL' => 'Alabama',
-            'AK' => 'Alaska',
-            'AZ' => 'Arizona',
-            'AR' => 'Arkansas',
-            'CA' => 'California',
-            'CO' => 'Colorado',
-            'CT' => 'Connecticut',
-            'DE' => 'Delaware',
-            'DC' => 'District of Columbia',
-            'FL' => 'Florida',
-            'GA' => 'Georgia',
-            'HI' => 'Hawaii',
-            'ID' => 'Idaho',
-            'IL' => 'Illinois',
-            'IN' => 'Indiana',
-            'IA' => 'Iowa',
-            'KS' => 'Kansas',
-            'KY' => 'Kentucky',
-            'LA' => 'Louisiana',
-            'ME' => 'Maine',
-            'MD' => 'Maryland',
-            'MA' => 'Massachusetts',
-            'MI' => 'Michigan',
-            'MN' => 'Minnesota',
-            'MS' => 'Mississippi',
-            'MO' => 'Missouri',
-            'MT' => 'Montana',
-            'NE' => 'Nebraska',
-            'NV' => 'Nevada',
-            'NH' => 'New Hampshire',
-            'NJ' => 'New Jersey',
-            'NM' => 'New Mexico',
-            'NY' => 'New York',
-            'NC' => 'North Carolina',
-            'ND' => 'North Dakota',
-            'OH' => 'Ohio',
-            'OK' => 'Oklahoma',
-            'OR' => 'Oregon',
-            'PA' => 'Pennsylvania',
-            'RI' => 'Rhode Island',
-            'SC' => 'South Carolina',
-            'SD' => 'South Dakota',
-            'TN' => 'Tennessee',
-            'TX' => 'Texas',
-            'UT' => 'Utah',
-            'VT' => 'Vermont',
-            'VA' => 'Virginia',
-            'WA' => 'Washington',
-            'WV' => 'West Virginia',
-            'WI' => 'Wisconsin',
-            'WY' => 'Wyoming'
-        ];
+        if ($this->options === null) {
+            $this->dispatch(new BuildOptions($this));
+        }
 
-        return [null => $this->getPlaceholder()] + $states;
+        $topOptions = array_get($this->getConfig(), 'top_options');
+
+        if (!is_array($topOptions)) {
+            $topOptions = array_filter(array_reverse(explode("\r\n", $topOptions)));
+        }
+
+        foreach ($topOptions as $key) {
+            $this->options = [$key => $this->options[$key]] + $this->options;
+        }
+
+        return array_filter([null => $this->getPlaceholder()] + $this->options);
+    }
+
+    /**
+     * Set the options.
+     *
+     * @param array $options
+     * @return $this
+     */
+    public function setOptions(array $options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 
     /**

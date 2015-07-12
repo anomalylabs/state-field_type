@@ -13,4 +13,25 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldTypePresenter;
 class StateFieldTypePresenter extends FieldTypePresenter
 {
 
+    /**
+     * The decorated object.
+     * This is for IDE support.
+     *
+     * @var StateFieldType
+     */
+    protected $object;
+
+    /**
+     * Return the state's name.
+     *
+     * @return null|string
+     */
+    public function name()
+    {
+        if (!$iso = $this->object->getValue()) {
+            return null;
+        }
+
+        return array_get($this->object->getOptions(), $iso);
+    }
 }
