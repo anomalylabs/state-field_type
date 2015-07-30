@@ -31,7 +31,7 @@ The state field type provides a list of states in an HTML select input.
 
 The country in which to display states for. Any existing valid 2-digit ISO country code is allowed. The default value is `'US'`.
  
-Country lists are located in `resources/config/states/{code}.php`. 
+Country lists are located in `state-field_type/resources/config/states/{country}.php`. 
 
 If your country is not yet supported please submit a pull request to add it!
 
