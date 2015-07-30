@@ -22,9 +22,9 @@ The state field type provides a list of states in an HTML select input.
         'example' => [
             'type'   => 'anomaly.field_type.country',
             'config' => [
-                'country' => 'US',
-                'country' => 'IL',
-                'handler' => 'Anomaly\StateFieldType\StateFieldTypeOptions@handle'
+                'country'       => 'US',
+                'default_value' => 'IL',
+                'handler'       => 'Anomaly\StateFieldType\StateFieldTypeOptions@handle'
             ]
         ]
     ];
