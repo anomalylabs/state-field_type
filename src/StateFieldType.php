@@ -59,7 +59,7 @@ class StateFieldType extends FieldType
             $this->options = [$key => $this->options[$key]] + $this->options;
         }
 
-        return array_filter([null => trans($this->getPlaceholder())] + $this->options);
+        return $this->options;
     }
 
     /**
