@@ -20,7 +20,7 @@ The state field type provides a list of states in an HTML select input.
 
     protected $fields = [
         'example' => [
-            'type'   => 'anomaly.field_type.country',
+            'type'   => 'anomaly.field_type.state',
             'config' => [
                 'country'       => 'US',
                 'default_value' => 'IL',
