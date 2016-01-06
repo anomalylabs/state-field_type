@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'country' => [
+    'country'     => [
         'type'     => 'anomaly.field_type.select',
         'required' => true,
         'config'   => [
@@ -23,5 +23,8 @@ return [
                 return $options;
             }
         ]
+    ],
+    'top_options' => [
+        'type' => 'anomaly.field_type.textarea'
     ]
 ];
