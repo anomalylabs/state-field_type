@@ -17,12 +17,12 @@ class StateFieldTypeOptions
      * Handle the options.
      *
      * @param StateFieldType $fieldType
-     * @param Repository     $config
+     * @param Repository $config
      */
     public function handle(StateFieldType $fieldType, Repository $config)
     {
         $fieldType->setOptions(
-            $config->get('anomaly.field_type.state::states/' . array_get($fieldType->getConfig(), 'country'))
+            $config->get('anomaly.field_type.state::states/' . array_get($fieldType->getConfig(), 'country'), [])
         );
     }
 }
