@@ -22,18 +22,18 @@ The state field type provides a list of states in an HTML select input.
         'example' => [
             'type'   => 'anomaly.field_type.state',
             'config' => [
-                'country'       => 'US',
+                'countries'     => ['US'],
                 'default_value' => 'IL',
                 'handler'       => 'Anomaly\StateFieldType\StateFieldTypeOptions@handle'
             ]
         ]
     ];
 
-### `country`
+### `countries`
 
-The country in which to display states for. Any existing valid 2-digit ISO country code is allowed. The default value is `'US'`.
+The countries in which to display states for. Any existing valid 2-digit ISO country codes are allowed. The default value is `null` (all countries).
  
-Country lists are located in `state-field_type/resources/config/states/{country}.php`. 
+Country lists are located in `/vendor/anomaly/streams-platform/resources/config/states/{country}.php`.
 
 If your country is not yet supported please submit a pull request to add it!
 
