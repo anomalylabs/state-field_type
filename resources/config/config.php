@@ -1,30 +1,14 @@
 <?php
 
 return [
-    'country'     => [
-        'type'     => 'anomaly.field_type.select',
-        'required' => true,
-        'config'   => [
-            'top_options' => [
+    'countries' => [
+        'type'   => 'anomaly.field_type.checkboxes',
+        'config' => [
+            'default_value' => [
                 'US'
             ],
-            'options'     => function (
-                \Anomaly\StateFieldType\StateFieldType $fieldType,
-                \Illuminate\Filesystem\Filesystem $files
-            ) {
-                $options = [];
-
-                foreach ($files->files($fieldType->getPath('resources/config/states')) as $path) {
-                    $options[basename($path, '.php')] = trans(
-                        'anomaly.field_type.country::country.' . basename($path, '.php')
-                    );
-                }
-
-                return $options;
-            }
+            'handler'       => 'countries',
+            'mode'          => 'tags',
         ]
-    ],
-    'top_options' => [
-        'type' => 'anomaly.field_type.textarea'
     ]
 ];
