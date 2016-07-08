@@ -22,6 +22,13 @@ class StateFieldType extends FieldType
     protected $inputView = 'anomaly.field_type.state::input';
 
     /**
+     * The filter view.
+     *
+     * @var string
+     */
+    protected $filterView = 'anomaly.field_type.state::filter';
+
+    /**
      * The field type config.
      *
      * @var array
