@@ -9,7 +9,6 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\StateFieldType
  */
 class StateFieldType extends FieldType
 {
@@ -41,7 +40,7 @@ class StateFieldType extends FieldType
      * @var array
      */
     protected $config = [
-        'handler' => 'Anomaly\StateFieldType\StateFieldTypeOptions@handle'
+        'handler' => 'Anomaly\StateFieldType\StateFieldTypeOptions@handle',
     ];
 
     /**
@@ -78,7 +77,7 @@ class StateFieldType extends FieldType
     /**
      * Set the options.
      *
-     * @param array $options
+     * @param  array $options
      * @return $this
      */
     public function setOptions(array $options)

@@ -8,7 +8,6 @@ use Illuminate\Config\Repository;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\StateFieldType
  */
 class StateFieldTypeOptions
 {
@@ -17,7 +16,7 @@ class StateFieldTypeOptions
      * Handle the options.
      *
      * @param StateFieldType $fieldType
-     * @param Repository $config
+     * @param Repository     $config
      */
     public function handle(StateFieldType $fieldType, Repository $config)
     {

@@ -5,10 +5,10 @@ return [
         'type'   => 'anomaly.field_type.checkboxes',
         'config' => [
             'default_value' => [
-                'US'
+                'US',
             ],
             'handler'       => 'countries',
             'mode'          => 'tags',
-        ]
-    ]
+        ],
+    ],
 ];
