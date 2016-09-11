@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'placeholder' => 'Choose a state...'
+    'placeholder' => 'اختر ولاية...'
 ];

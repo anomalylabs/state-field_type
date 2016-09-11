@@ -2,7 +2,7 @@
 
 return [
     'countries' => [
-        'label'        => 'المدن',
+        'label'        => 'بلدان',
         'instructions' => 'حدد البلدان لعرضها دول / محافظات لـ.'
     ],
 ];
