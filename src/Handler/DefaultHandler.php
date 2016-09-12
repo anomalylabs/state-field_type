@@ -1,15 +1,16 @@
-<?php namespace Anomaly\StateFieldType;
+<?php namespace Anomaly\StateFieldType\Handler;
 
-use Illuminate\Config\Repository;
+use Anomaly\StateFieldType\StateFieldType;
+use Illuminate\Contracts\Config\Repository;
 
 /**
- * Class StateFieldTypeOptions
+ * Class DefaultHandler
  *
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
  */
-class StateFieldTypeOptions
+class DefaultHandler
 {
 
     /**
