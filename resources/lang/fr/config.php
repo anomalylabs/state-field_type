@@ -3,6 +3,6 @@
 return [
     'country' => [
         'label'        => 'Pays',
-        'instructions' => 'Choisissez le pays pour lequel afficher les états.'
-    ]
+        'instructions' => 'Choisissez le pays pour lequel afficher les états.',
+    ],
 ];
