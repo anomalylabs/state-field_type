@@ -80,7 +80,7 @@ class StateFieldType extends FieldType
      */
     public function getOptions()
     {
-        if ($this->options === null) {
+        if ($this->options == null) {
             $this->dispatch(new BuildOptions($this));
         }
 

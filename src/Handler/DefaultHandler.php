@@ -45,10 +45,6 @@ class DefaultHandler
             }
         }
 
-        if (count($options) == 1) {
-            $options = array_pop($options);
-        }
-
         $fieldType->setOptions($options);
     }
 }
