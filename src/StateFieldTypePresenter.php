@@ -21,6 +21,20 @@ class StateFieldTypePresenter extends FieldTypePresenter
     protected $object;
 
     /**
+     * Get the state code.
+     *
+     * @return null|string
+     */
+    public function code()
+    {
+        if (!$key = $this->object->getValue()) {
+            return null;
+        }
+
+        return strtoupper($key);
+    }
+
+    /**
      * Return the state's name.
      *
      * @return null|string
