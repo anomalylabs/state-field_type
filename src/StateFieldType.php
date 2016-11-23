@@ -139,7 +139,7 @@ class StateFieldType extends FieldType
     }
 
     /**
-     * Get the class.s
+     * Get the class.
      *
      * @return null|string
      */
@@ -149,6 +149,6 @@ class StateFieldType extends FieldType
             return $class;
         }
 
-        return $this->config('mode') == 'dropdown' ? 'c-select form-control' : 'form-control';
+        return $this->config('mode') == 'dropdown' ? 'custom-select form-control' : 'form-control';
     }
 }
