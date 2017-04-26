@@ -1,4 +1,6 @@
-<select class="{{ field_type.class }}" name="{{ field_type.input_name }}" {{ html_attributes(field_type.attributes) }}>
+<select
+        class="custom-select form-control"
+        name="{{ field_type.input_name }}" {{ html_attributes(field_type.attributes) }}>
 
     <option value="">{{ trans(field_type.placeholder) }}</option>
 
