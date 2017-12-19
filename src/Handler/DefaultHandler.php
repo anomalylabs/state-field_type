@@ -45,6 +45,8 @@ class DefaultHandler
             }
         }
 
+        sort($options);
+
         $fieldType->setOptions($options);
     }
 }
