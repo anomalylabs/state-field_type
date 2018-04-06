@@ -37,7 +37,7 @@ class DefaultHandler
                     array_keys($states),
                     array_map(
                         function ($state) {
-                            return $state['name'];
+                            return trans($state['name']);
                         },
                         $states
                     )
