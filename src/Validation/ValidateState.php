@@ -16,7 +16,7 @@ class ValidateState
     /**
      * Handle the validation.
      *
-     * @param StateFieldType   $fieldType
+     * @param StateFieldType $fieldType
      * @param                  $value
      * @return bool
      */

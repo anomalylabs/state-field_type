@@ -53,11 +53,19 @@ $choices-button-offset: 8px !default;
         width: 100%;
         padding: 10px;
         border-bottom: 1px solid $choices-keyline-color;
+<<<<<<< Updated upstream
         background-color: #FFFFFF;
         margin: 0;
     }
     .#{$choices-selector}__button {
         background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMSAyMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yLjU5Mi4wNDRsMTguMzY0IDE4LjM2NC0yLjU0OCAyLjU0OEwuMDQ0IDIuNTkyeiIvPjxwYXRoIGQ9Ik0wIDE4LjM2NEwxOC4zNjQgMGwyLjU0OCAyLjU0OEwyLjU0OCAyMC45MTJ6Ii8+PC9nPjwvc3ZnPg==);
+=======
+        background-color: #ffffff;
+        margin: 0;
+    }
+    .#{$choices-selector}__button {
+        background-image: url('{{ img("pyrocms.theme.accelerant::img/choices/cross-inverse.svg").path }}');
+>>>>>>> Stashed changes
         padding: 0;
         background-size: 8px;
         height: 100%;
@@ -121,7 +129,11 @@ $choices-button-offset: 8px !default;
         margin-left: $choices-button-offset;
         padding-left: $choices-button-offset*2;
         border-left: 1px solid darken($choices-primary-color, 10%);
+<<<<<<< Updated upstream
         background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMSAyMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjRkZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yLjU5Mi4wNDRsMTguMzY0IDE4LjM2NC0yLjU0OCAyLjU0OEwuMDQ0IDIuNTkyeiIvPjxwYXRoIGQ9Ik0wIDE4LjM2NEwxOC4zNjQgMGwyLjU0OCAyLjU0OEwyLjU0OCAyMC45MTJ6Ii8+PC9nPjwvc3ZnPg==);
+=======
+        background-image: url('{{ img("anomaly.field_type.checkboxes::img/cross.svg").path }}');
+>>>>>>> Stashed changes
         background-size: $choices-button-dimension;
         width: $choices-button-dimension;
         line-height: 1;
@@ -186,7 +198,11 @@ $choices-button-offset: 8px !default;
         margin-bottom: 3.75px;
         background-color: $choices-primary-color;
         border: 1px solid darken($choices-primary-color, 5%);
+<<<<<<< Updated upstream
         color: #FFFFFF;
+=======
+        color: #ffffff;
+>>>>>>> Stashed changes
         word-break: break-all;
         &[data-deletable] {
             padding-right: 5px;
@@ -270,7 +286,11 @@ $choices-button-offset: 8px !default;
             }
         }
         &.is-highlighted {
+<<<<<<< Updated upstream
             background-color: mix(#000000, #FFFFFF, 5%);
+=======
+            background-color: mix(#000000, #ffffff, 5%);
+>>>>>>> Stashed changes
             &:after {
                 opacity: .5;
             }
@@ -297,7 +317,11 @@ $choices-button-offset: 8px !default;
     font-size: $choices-font-size-sm;
     padding: 10px;
     border-bottom: 1px solid lighten($choices-keyline-color, 10%);
+<<<<<<< Updated upstream
     color: lighten(#333, 30%);
+=======
+    color: lighten(#333333, 30%);
+>>>>>>> Stashed changes
 }
 
 .#{$choices-selector}__button {

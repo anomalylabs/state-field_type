@@ -3,7 +3,6 @@
 use Anomaly\StateFieldType\StateFieldType;
 use Illuminate\Container\Container;
 
-
 /**
  * Class BuildOptions
  *
@@ -26,7 +25,7 @@ class BuildOptions
      *
      * @param StateFieldType $fieldType
      */
-    function __construct(StateFieldType $fieldType)
+    public function __construct(StateFieldType $fieldType)
     {
         $this->fieldType = $fieldType;
     }

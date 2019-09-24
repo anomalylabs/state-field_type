@@ -1,7 +1,6 @@
 <?php namespace Anomaly\StateFieldType;
 
 use Anomaly\StateFieldType\Command\BuildOptions;
-use Anomaly\StateFieldType\Handler\DefaultHandler;
 use Anomaly\StateFieldType\Validation\ValidateState;
 use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 
@@ -81,7 +80,7 @@ class StateFieldType extends FieldType
     public function getOptions()
     {
         if ($this->options == null) {
-            $this->dispatch(new BuildOptions($this));
+            dispatch_now(new BuildOptions($this));
         }
 
         $topOptions = array_get($this->getConfig(), 'top_options');
